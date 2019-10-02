@@ -25,16 +25,45 @@ namespace Reproductor_StarWars
             InitializeComponent();
         }
 
-        private void Silenciar_Checked(object sender, RoutedEventArgs e)
-        {
-            Pantalla.IsMuted = true;
-        }
+        
 
         private void Play_Click(object sender, RoutedEventArgs e)
         {
-            if(Trailer1.IsChecked == true)
+            Pantalla.Play();
+        }
+
+        private void Pause_Click(object sender, RoutedEventArgs e)
+        {
+            Pantalla.Pause();
+        }
+
+        private void Stop_Click(object sender, RoutedEventArgs e)
+        {
+            Pantalla.Stop();
+        }
+
+        private void Silenciar_Click(object sender, RoutedEventArgs e)
+        {
+            if (Silenciar.IsChecked == true)
             {
-                
+                Pantalla.IsMuted = true;
+            }
+            else
+            {
+                Pantalla.IsMuted = false;
+            }
+        }
+
+        private void Trailer_Checked(object sender, RoutedEventArgs e)
+        {
+            if (Trailer1.IsChecked == true)
+            {
+                Pantalla.Source = new Uri(@"E:\2 DAM\DINT\2. Introduccion a WPF\Ejercicios\Reproductor StarWars\Reproductor StarWars\trailer1.mp4");
+                Pantalla.Play();
+            }
+            else if (Trailer2.IsChecked == true)
+            {
+                Pantalla.Source = new Uri(@"E:\2 DAM\DINT\2. Introduccion a WPF\Ejercicios\Reproductor StarWars\Reproductor StarWars\trailer2.mp4");
                 Pantalla.Play();
             }
         }

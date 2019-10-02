@@ -10,22 +10,25 @@
 
     <DockPanel>
 
-        <CheckBox x:Name="Silenciar" Margin="5" DockPanel.Dock="Bottom" Checked="Silenciar_Checked">Silenciar</CheckBox>        
-        
-        <StackPanel DockPanel.Dock="Right" HorizontalAlignment="Right" Orientation="Vertical">
-            <Button x:Name="Play" Padding="30,2" Margin="5" Click="Play_Click">Play</Button>
-            <Button x:Name="Pause" Padding="30,2" Margin="5">Pause</Button>
-            <Button x:Name="Stop" Padding="30,2" Margin="5">Stop</Button>
+        <CheckBox x:Name="Silenciar" Margin="5" DockPanel.Dock="Bottom"  Click="Silenciar_Click">Silenciar</CheckBox>
+    
+        <DockPanel DockPanel.Dock="Right" HorizontalAlignment="Right">
             
-            <RadioButton x:Name="Trailer1" Margin="3">Trailer 1</RadioButton>
-            <RadioButton x:Name="Trailer2" Margin="3">Trailer 2</RadioButton>           
+            <StackPanel DockPanel.Dock="Bottom">
+                <RadioButton x:Name="Trailer1" Margin="3" Checked="Trailer_Checked">Trailer 1</RadioButton>
+                <RadioButton x:Name="Trailer2" Margin="3" Checked="Trailer_Checked">Trailer 2</RadioButton>
+            </StackPanel>
+            <StackPanel DockPanel.Dock="Top">
+                <Button x:Name="Play" Padding="30,2" Margin="5" Click="Play_Click">Play</Button>
+                <Button x:Name="Pause" Padding="30,2" Margin="5" Click="Pause_Click">Pause</Button>
+                <Button x:Name="Stop" Padding="30,2" Margin="5" Click="Stop_Click">Stop</Button>
+            </StackPanel>            
+        </DockPanel>
             
-        </StackPanel>
-        
         <Border  BorderThickness="2" BorderBrush="Black">
-            <MediaElement x:Name="Pantalla"  LoadedBehavior="Manual"></MediaElement>
+            <MediaElement x:Name="Pantalla"  LoadedBehavior="Manual" Margin="2"></MediaElement>
         </Border>
-
+     
     </DockPanel>
 
 </Window>
