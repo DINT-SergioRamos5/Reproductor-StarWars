@@ -12,7 +12,7 @@
 
         <CheckBox x:Name="Silenciar" Margin="5" DockPanel.Dock="Bottom"  Click="Silenciar_Click">Silenciar</CheckBox>
     
-        <DockPanel DockPanel.Dock="Right" HorizontalAlignment="Right">
+        <DockPanel DockPanel.Dock="Right" HorizontalAlignment="Right" >
             
             <StackPanel DockPanel.Dock="Bottom">
                 <RadioButton x:Name="Trailer1" Margin="3" Checked="Trailer_Checked">Trailer 1</RadioButton>
